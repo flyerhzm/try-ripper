@@ -1,7 +1,7 @@
 %h3 Ruby Code
 %form(action="/" method="post")
-  %textarea(rows="10" style="width:100%" name="code")
+  %textarea(rows="10" style="width:100%" name="code")= @code
   %button.btn(type="submit") Convert
 
-%form
-  %textarea(rows="10" style="width:100%")= @sexp
+%h3 Ripper Result
+%pre= @result
