@@ -13,5 +13,10 @@
         .container
           %a.brand(href="/") Try Ripper
     .container
+      - if @alert
+        .alert
+          %button.close(type="button" data-dismiss="alert") ×
+          %strong Warning!
+          = @alert
       = yield
     %script(src="/lib/bootstrap/js/bootstrap.min.js")

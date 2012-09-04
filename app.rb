@@ -15,7 +15,12 @@ post '/' do
   sexp = Ripper::SexpBuilder.new(@code).parse
   @result = ""
   @indent = -1
-  parse(sexp)
+  begin
+    parse(sexp)
+    haml :index
+  rescue
+    @alert = "not valid ruby code"
+  end
   haml :index
 end
 
