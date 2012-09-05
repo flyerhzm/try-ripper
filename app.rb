@@ -26,6 +26,7 @@ end
 
 def parse(nodes)
   @indent += 1
+  @result << "<div>"
   nodes.each do |node|
     if node.is_a? Array
       parse(node)
@@ -35,6 +36,7 @@ def parse(nodes)
       @result << "<br/>"
     end
   end
+  @result << "</div>"
   @indent -= 1
 end
 
