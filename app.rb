@@ -29,7 +29,11 @@ def parse(nodes)
   @result << "<div>"
   nodes.each do |node|
     if node.is_a? Array
+      @result << "&nbsp;" * @indent * 2
+      @result << "s("
       parse(node)
+      @result << "&nbsp;" * @indent * 2
+      @result << "),<br/>"
     else
       @result << "&nbsp;" * @indent * 2
       @result << output(node)
