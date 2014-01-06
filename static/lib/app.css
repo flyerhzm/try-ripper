@@ -1,3 +1,6 @@
+.navbar-fixed-top {
+  padding: 0 20px;
+}
 .red {
   color: red;
 }
@@ -6,4 +9,14 @@
 }
 .fold span {
   font-size: 150%;
+}
+.left-part {
+  width: 48%;
+  float: left;
+  padding: 20px 0;
+}
+.right-part {
+  width: 48%;
+  float: right;
+  padding: 20px 0;
 }

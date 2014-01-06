@@ -1,0 +1,20 @@
+{
+  "name": "try-ripper",
+  "version": "0.0.0",
+  "homepage": "https://github.com/flyerhzm/try-ripper",
+  "authors": [
+    "Richard Huang <flyerhzm@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": [
+    "bootstrap": "3.0.3",
+    "jquery": "2.0.3"
+  ]
+}
