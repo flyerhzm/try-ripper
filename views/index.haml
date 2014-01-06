@@ -1,7 +1,15 @@
-%h3 Ruby Code
-%form(action="/" method="post")
-  %textarea(rows="10" style="width:100%" name="code")= @code
-  %button.btn(type="submit") Convert
+%ul.nav.nav-tabs
+  %li{class: ("active" if @source == "ruby")}
+    %a(href="#ruby") Ruby -> Sexp
+  %li{class: ("active" if @source == "sexp")}
+    %a(href="#sexp") Sexp -> Ruby
 
-%h3 Ripper Result
-%pre= @result
+.left-part
+  %form(role="form" action="/" method="post")
+    %input(type="hidden" name="source" value="ruby")
+    .form-group
+      %textarea.form-control(rows="10" name="code")= @code
+    %button.btn.btn-primary(type="submit") Convert
+
+.right-part
+  %pre= @result
